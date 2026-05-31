@@ -15,3 +15,19 @@ I am building this website to display and develop my web-dev skills. Since my we
 - [ ] Host somewhere
 - [ ] Set up DNS
 - [ ] Github actions pipeline
+
+## Development
+
+### Instructions
+```bash
+# install dependencies
+npm install
+
+# run locally
+npm run dev
+```
+
+### Technologies
+- [React](react.dev)
+- [React Router](https://reactrouter.com/)
+- [Tailwind CSS](https://tailwindcss.com/)
