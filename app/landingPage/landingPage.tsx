@@ -18,7 +18,7 @@ export function LandingPage() {
         {/* about section */}
         <div className="flex">
           <img
-            className="max-w-120"
+            className="max-w-120 brightness-90 contrast-110"
             src={portrait}
             alt="Quinn's Portrait"
           />
