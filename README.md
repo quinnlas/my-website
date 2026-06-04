@@ -28,6 +28,6 @@ npm run dev
 ```
 
 ### Technologies
-- [React](react.dev)
+- [React](https://react.dev)
 - [React Router](https://reactrouter.com/)
 - [Tailwind CSS](https://tailwindcss.com/)
