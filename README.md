@@ -8,12 +8,18 @@ I am building this website to display and develop my web-dev skills. Since my we
 
 ## TODO
 - [x] Website structure with navbars etc
-- [ ] Landing page with pictures of me
+- [x] Landing page with pictures of me
+- [x] Project page that displays various projects I've worked on
+- [x] Host somewhere
+- [x] Set up DNS
+- [x] Set up SSL
+- [ ] Fix formatting
+  - [x] Max width
+  - [x] Link indication
+  - [x] Text spacing and headers
+  - [ ] Make it pop
 - [ ] Resume page with web version and downloadable pdf
-- [ ] Project page that displays various projects I've worked on
-- [ ] Contact page or button
-- [ ] Host somewhere
-- [ ] Set up DNS
+- [ ] More contact info?
 - [ ] Github actions pipeline
 
 ## Development

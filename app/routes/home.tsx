@@ -4,7 +4,7 @@ import { LandingPage } from "../landingPage/landingPage";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "Quinn Las - Full Stack Dev" },
+    { title: "Quinn Las | Web Dev" },
     { name: "description", content: "Quinn's website." },
   ];
 }
