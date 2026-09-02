@@ -13,11 +13,11 @@ I am building this website to display and develop my web-dev skills. Since my we
 - [x] Host somewhere
 - [x] Set up DNS
 - [x] Set up SSL
-- [ ] Fix formatting
+- [x] Fix formatting
   - [x] Max width
   - [x] Link indication
   - [x] Text spacing and headers
-  - [ ] Make it pop
+  - [x] Make it pop
 - [ ] Resume page with web version and downloadable pdf
 - [ ] More contact info?
 - [ ] Github actions pipeline

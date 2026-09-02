@@ -19,12 +19,12 @@ export function LandingPage() {
         {/* about section */}
         <div className="flex">
           <img
-            className="max-w-150 brightness-100 contrast-110"
+            className="max-w-150 brightness-100 contrast-100 saturate-150"
             src={portrait}
             alt="Quinn's Portrait"
           />
-          <div className="px-10">
-            <h1 className="text-2xl pb-10">I'm Quinn, a software developer in Minneapolis.</h1>
+          <div className="px-10 my-auto">
+            <h1 className="text-4xl pb-10 font-serif">I'm Quinn, a software developer in Minneapolis.</h1>
             <p>I have 4 years of experience in web development and 3 in SQA. Check out my projects and experience, download my resume, or get in touch.</p>
             <ul id="contact" className="pt-5">
               <li>
@@ -40,7 +40,7 @@ export function LandingPage() {
         <hr className="my-10" />
 
         {/* experience */}
-        <h1 className="text-2xl pb-10" id="experience">Experience</h1>
+        <h1 className="text-4xl pb-10 font-serif" id="experience">Experience</h1>
         <div className="text-xl pb-5">Voxtelesys - Full Stack Developer <span className="float-right">2019 - 2022</span></div>
         <p>
           Working at a small business, I wore a lot of hats. I was the lead developer for the employee web portal and also built the internal ticketing system, among other things:
@@ -62,7 +62,7 @@ export function LandingPage() {
         <hr className="my-10" />
 
         {/* projects */}
-        <h1 className="text-2xl pb-10" id="projects">Projects</h1>
+        <h1 className="text-4xl pb-10 font-serif" id="projects">Projects</h1>
         <h2 className="text-xl pb-5">City Learner</h2>
         <p>
           A React project that draws the map of a city with a configurable level of detail. <a className="text-sky-500 hover:text-lime-500" href="https://quinnlas.github.io/city-learner/">Try it!</a>
