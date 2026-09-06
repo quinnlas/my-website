@@ -19,7 +19,7 @@ I am building this website to display and develop my web-dev skills. Since my we
   - [x] Link indication
   - [x] Text spacing and headers
   - [x] Make it pop
-- [ ] Downloadable resume pdf
+- [x] Downloadable resume pdf
 - [ ] More contact info?
 - [ ] Github actions pipeline
 - [ ] Mobile friendly

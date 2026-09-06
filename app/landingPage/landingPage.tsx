@@ -59,6 +59,11 @@ export function LandingPage() {
           <li>Save on cost of quality by finding key defects and driving resolution.</li>
         </ul>
 
+        <div className="my-10">
+          <a className="text-sky-500 hover:text-lime-500" href="/Quinn Las Resume.pdf" download>Download my resume</a>
+        </div>
+        
+
         <hr className="my-10" />
 
         {/* projects */}
