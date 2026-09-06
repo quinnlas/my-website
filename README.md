@@ -9,6 +9,7 @@ I am building this website to display and develop my web-dev skills. Since my we
 ## TODO
 - [x] Website structure with navbars etc
 - [x] Landing page with pictures of me
+- [x] Experience section
 - [x] Project page that displays various projects I've worked on
 - [x] Host somewhere
 - [x] Set up DNS
@@ -18,9 +19,10 @@ I am building this website to display and develop my web-dev skills. Since my we
   - [x] Link indication
   - [x] Text spacing and headers
   - [x] Make it pop
-- [ ] Resume page with web version and downloadable pdf
+- [ ] Downloadable resume pdf
 - [ ] More contact info?
 - [ ] Github actions pipeline
+- [ ] Mobile friendly
 
 ## Development
 
@@ -31,6 +33,9 @@ npm install
 
 # run locally
 npm run dev
+
+# build for production
+npm run build
 ```
 
 ### Technologies

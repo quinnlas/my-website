@@ -50,7 +50,7 @@ export function LandingPage() {
           <li>Created Node.js/MongoDB/Elasticsearch ticketing system with email and calendar integration, enabling support team organization and communication.</li>
           <li>Created Electron desktop application to spin up and configure VMs, saving support team time.</li>
         </ul>
-        <div className="text-xl py-5">Open Systems International - Software Quality Engineer <span className="float-right">2023 - Present</span></div>  
+        <div className="text-xl pt-7 pb-5">Open Systems International - Software Quality Engineer <span className="float-right">2023 - Present</span></div>  
         <p>
           At OSI, I support the SQA team by managing the complex environments needed for testing power grid software.
         </p>
