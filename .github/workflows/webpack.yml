@@ -26,3 +26,4 @@ jobs:
       run: |
         npm install
         npm run build
+        zip -r release build/client
