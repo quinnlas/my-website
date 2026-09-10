@@ -7,6 +7,8 @@ https://www.quinnlas.com
 I am building this website to display and develop my web-dev skills. Since my web-dev experience was mostly with Vue 2, I would like to explore React more. I will also get more experience with the hosting and DNS areas because I didn't work on those as much at previous jobs. Furthermore, my website will be a platform to display past and future projects.
 
 ## TODO
+
+### Main Page
 - [x] Website structure with navbars etc
 - [x] Landing page with pictures of me
 - [x] Experience section
@@ -21,8 +23,15 @@ I am building this website to display and develop my web-dev skills. Since my we
   - [x] Make it pop
 - [x] Downloadable resume pdf
 - [ ] More contact info?
-- [ ] Github actions pipeline
+- [ ] Github actions
+  - [x] build and zip
+  - [ ] FTP setup
 - [ ] Mobile friendly
+
+### Noise Machine
+- [x] set up equalizer
+- [ ] set up link from main page
+- [ ] set up output
 
 ## Development
 
