@@ -33,5 +33,5 @@ jobs:
       uses: actions/upload-artifact@v7
       with:
         name: release
-        path: release.zip
+        path: build/client/release.zip
         archive: false
