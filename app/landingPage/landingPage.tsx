@@ -60,7 +60,8 @@ export function LandingPage() {
         </ul>
 
         <div className="my-10">
-          <a className="text-sky-500 hover:text-lime-500" href="/Quinn Las Resume.pdf" download>Download my resume</a>
+          Want to see more?&nbsp;
+          <a className="text-sky-500 hover:text-lime-500" href="/Quinn Las Resume.pdf" download>Download my resume.</a>
         </div>
         
 
@@ -74,7 +75,7 @@ export function LandingPage() {
         </p>
         <h2 className="text-xl py-5">This website!</h2>
         <p>
-          This website is built with React. Check out the <a className="text-sky-500 hover:text-lime-500" href="https://github.com/quinnlas/my-website">source code</a>.
+          This website is built with React. Check out the <a className="text-sky-500 hover:text-lime-500" href="https://github.com/quinnlas/my-website">source code.</a>
         </p>
       </main>
     </div>
