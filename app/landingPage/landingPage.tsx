@@ -41,7 +41,15 @@ export function LandingPage() {
 
         {/* experience */}
         <h1 className="text-4xl pb-10 font-serif" id="experience">Experience</h1>
-        <div className="text-xl pb-5">Voxtelesys - Full Stack Developer <span className="float-right">2019 - 2022</span></div>
+        <div className="text-xl pb-5">Open Systems International - Software Quality Engineer <span className="float-right">2023 - Present</span></div>  
+        <p>
+          At OSI, I support the SQA team by managing the complex environments needed for testing power grid software.
+        </p>
+        <ul className="list-disc list-inside mt-2">
+          <li>Maintain daily build system for SQA testing with Jenkins and Python.</li>
+          <li>Save on cost of quality by finding key defects and driving resolution.</li>
+        </ul>
+        <div className="text-xl pt-7 pb-5">Voxtelesys - Full Stack Developer <span className="float-right">2019 - 2022</span></div>
         <p>
           Working at a small business, I wore a lot of hats. I was the lead developer for the employee web portal and also built the internal ticketing system, among other things:
         </p>
@@ -49,14 +57,6 @@ export function LandingPage() {
           <li>Developed customer and employee portals with Vue 2/Node.js, reducing support calls and increasing resolution speed.</li>
           <li>Created Node.js/MongoDB/Elasticsearch ticketing system with email and calendar integration, enabling support team organization and communication.</li>
           <li>Created Electron desktop application to spin up and configure VMs, saving support team time.</li>
-        </ul>
-        <div className="text-xl pt-7 pb-5">Open Systems International - Software Quality Engineer <span className="float-right">2023 - Present</span></div>  
-        <p>
-          At OSI, I support the SQA team by managing the complex environments needed for testing power grid software.
-        </p>
-        <ul className="list-disc list-inside mt-2">
-          <li>Maintain daily build system for SQA testing with Jenkins and Python.</li>
-          <li>Save on cost of quality by finding key defects and driving resolution.</li>
         </ul>
 
         <div className="my-10">
