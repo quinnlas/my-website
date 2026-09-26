@@ -1,14 +1,17 @@
 # my-website
+
 My homepage:
 
 https://www.quinnlas.com
 
 ## Purpose
+
 I am building this website to display and develop my web-dev skills. Since my web-dev experience was mostly with Vue 2, I would like to explore React more. I will also get more experience with the hosting and DNS areas because I didn't work on those as much at previous jobs. Furthermore, my website will be a platform to display past and future projects.
 
 ## TODO
 
 ### Main Page
+
 - [x] Website structure with navbars etc
 - [x] Landing page with pictures of me
 - [x] Experience section
@@ -28,6 +31,7 @@ I am building this website to display and develop my web-dev skills. Since my we
 - [ ] Mobile friendly
 
 ### Noise Machine
+
 - [x] set up equalizer
 - [ ] set up link from main page
 - [ ] set up output
@@ -35,6 +39,7 @@ I am building this website to display and develop my web-dev skills. Since my we
 ## Development
 
 ### Instructions
+
 ```bash
 # install dependencies
 npm install
@@ -47,6 +52,7 @@ npm run build
 ```
 
 ### Technologies
+
 - [React](https://react.dev)
 - [React Router](https://reactrouter.com/)
 - [Tailwind CSS](https://tailwindcss.com/)
