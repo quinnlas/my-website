@@ -3,11 +3,11 @@ import portrait from "./portrait.jpg"
 export function LandingPage() {
   return (
     <div className="container mx-auto">
-      <div className="px-20 py-12">
+      <div className="px-6 py-12 sm:px-20">
         {/* nav bar */}
-        <nav className="mb-12 flex justify-between">
+        <nav className="mb-12 grid justify-between sm:grid-cols-2">
           <p className="text-xl">Quinn Las</p>
-          <div className="flex gap-3">
+          <div className="flex justify-end gap-3">
             <a className="text-sky-500 hover:text-lime-500" href="#contact">
               Contact
             </a>
@@ -22,14 +22,14 @@ export function LandingPage() {
 
         <main>
           {/* about section */}
-          <div className="flex">
+          <div className="grid gap-10 md:grid-cols-2">
             <img
-              className="max-w-150 brightness-100 contrast-100 saturate-150"
+              className="brightness-100 contrast-100 saturate-150"
               src={portrait}
               alt="Quinn's Portrait"
             />
-            <div className="my-auto px-10">
-              <h1 className="pb-10 font-serif text-4xl">
+            <div className="my-auto">
+              <h1 className="pb-10 font-serif text-3xl xl:text-4xl">
                 I'm Quinn, a software developer in Minneapolis.
               </h1>
               <p>
@@ -64,7 +64,7 @@ export function LandingPage() {
           <h1 className="pb-10 font-serif text-4xl" id="experience">
             Experience
           </h1>
-          <div className="pb-5 text-xl">
+          <div className="flex flex-wrap justify-between gap-5 pb-5 text-xl">
             Open Systems International - Software Quality Engineer
             <span className="float-right">2023 - Present</span>
           </div>
@@ -82,7 +82,7 @@ export function LandingPage() {
               resolution.
             </li>
           </ul>
-          <div className="pt-7 pb-5 text-xl">
+          <div className="flex flex-wrap justify-between gap-5 pt-7 pb-5 text-xl">
             Voxtelesys - Full Stack Developer
             <span className="float-right">2019 - 2022</span>
           </div>
@@ -107,7 +107,7 @@ export function LandingPage() {
             </li>
           </ul>
 
-          <div className="my-10">
+          <div className="my-10 inline-grid sm:grid-cols-2">
             Want to see more?&nbsp;
             <a
               className="text-sky-500 hover:text-lime-500"

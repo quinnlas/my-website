@@ -28,7 +28,7 @@ I am building this website to display and develop my web-dev skills. Since my we
 - [ ] Github actions
   - [x] build and zip
   - [ ] FTP setup
-- [ ] Mobile friendly
+- [x] Mobile friendly
 
 ### Noise Machine
 
