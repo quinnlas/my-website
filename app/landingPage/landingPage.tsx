@@ -124,7 +124,18 @@ export function LandingPage() {
           <h1 className="pb-10 font-serif text-4xl" id="projects">
             Projects
           </h1>
-          <h2 className="pb-5 text-xl">City Learner</h2>
+          <h2 className="pb-5 text-xl">This website!</h2>
+          <p>
+            This website is made with React and Tailwind CSS. It is built and
+            deployed automatically via Github Actions. Check out the{" "}
+            <a
+              className="text-sky-500 hover:text-lime-500"
+              href="https://github.com/quinnlas/my-website"
+            >
+              source code.
+            </a>
+          </p>
+          <h2 className="py-5 text-xl">City Learner</h2>
           <p>
             A React project that draws the map of a city with a configurable
             level of detail.{" "}
@@ -133,16 +144,6 @@ export function LandingPage() {
               href="https://quinnlas.github.io/city-learner/"
             >
               Try it!
-            </a>
-          </p>
-          <h2 className="py-5 text-xl">This website!</h2>
-          <p>
-            This website is built with React. Check out the{" "}
-            <a
-              className="text-sky-500 hover:text-lime-500"
-              href="https://github.com/quinnlas/my-website"
-            >
-              source code.
             </a>
           </p>
         </main>

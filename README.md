@@ -25,9 +25,9 @@ I am building this website to display and develop my web-dev skills. Since my we
   - [x] Text spacing and headers
   - [x] Make it pop
 - [x] Downloadable resume pdf
-- [ ] Github actions
+- [x] Github actions
   - [x] build and zip
-  - [ ] FTP setup
+  - [x] FTP setup
 - [x] Mobile friendly
 
 ### Noise Machine
