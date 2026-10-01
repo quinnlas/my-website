@@ -39,7 +39,7 @@ jobs:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASS }}
-          local-dir: ./build/client
+          local-dir: ./build/client/
 
       # - name: Upload Artifact
       #   uses: actions/upload-artifact@v7
