@@ -30,7 +30,7 @@ jobs:
         run: |
           npm install
           npm run build
-          cd build/client
+          # cd build/client
           # zip -r release .
 
       - name: Upload via FTP
@@ -39,6 +39,7 @@ jobs:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASS }}
+          local-dir: ./build/client
 
       # - name: Upload Artifact
       #   uses: actions/upload-artifact@v7
