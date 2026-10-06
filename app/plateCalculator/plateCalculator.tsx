@@ -46,6 +46,7 @@ export function PlateCalculator() {
     barWeight: 45,
     platePairs: [
       // see note about uuid in plateCalculatorSettings
+      [2.5, 1, crypto.randomUUID()],
       [5, 1, crypto.randomUUID()],
       [10, 2, crypto.randomUUID()],
       [25, 1, crypto.randomUUID()],
