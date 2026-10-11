@@ -1,20 +1,23 @@
 // recursively calculate all combinations
-export function calcPlateCombinations(barWeight, platePairs) {
-  if (platePairs.length === 0) return [[barWeight, []]]
+export function calcPlateCombinations(barWeight, platePairsAvailable) {
+  if (platePairsAvailable.length === 0)
+    return [{ weight: barWeight, platePairs: [] }]
 
-  const current = platePairs[0]
-  const remaining = platePairs.slice(1)
+  const current = platePairsAvailable[0]
+  const remaining = platePairsAvailable.slice(1)
   const result = []
-  for (let num = 0; num <= current[1]; num++) {
-    const currentWeight = current[0] * 2 * num
-    for (let [w, c] of calcPlateCombinations(0, remaining)) {
-      result.push([
-        w + barWeight + currentWeight,
-        [...c, [current[0], num]],
-        window.crypto.randomUUID(),
-      ])
+  for (let num = 0; num <= current.numPairs; num++) {
+    const currentWeight = current.weight * 2 * num
+    for (let { weight: w, platePairs: c } of calcPlateCombinations(
+      0,
+      remaining,
+    )) {
+      result.push({
+        weight: w + barWeight + currentWeight,
+        platePairs: [...c, { weight: current.weight, numPairs: num }],
+      })
     }
   }
 
-  return result.sort((a, b) => a[0] - b[0])
+  return result.sort((a, b) => a.weight - b.weight)
 }

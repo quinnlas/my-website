@@ -1,6 +1,7 @@
-import { useState } from "react"
+import { useState, useReducer } from "react"
 import { PlateCalculatorSettings } from "./plateCalculatorSettings"
 import { calcPlateCombinations } from "./calculate"
+import plateCalculatorReducer from "./plateCalculatorReducer"
 
 function CalculatorButton({ value, onClick }) {
   return (
@@ -32,59 +33,91 @@ function SamePlateGroup({ weight, quantity }) {
 function PlateCombination({ combination }) {
   return (
     <div>
-      {combination.map(([w, q], i) => (
-        <SamePlateGroup key={i} weight={w} quantity={q} />
+      {combination.map(({ weight, numPairs }, i) => (
+        <SamePlateGroup key={i} weight={weight} quantity={numPairs} />
       ))}
     </div>
   )
 }
 
+const initialSettings = {
+  barWeight: 45,
+  platePairs: [
+    {
+      weight: 2.5,
+      numPairs: 1,
+      id: 0,
+    },
+    {
+      weight: 5,
+      numPairs: 1,
+      id: 1,
+    },
+    {
+      weight: 10,
+      numPairs: 2,
+      id: 2,
+    },
+    {
+      weight: 25,
+      numPairs: 1,
+      id: 3,
+    },
+    {
+      weight: 45,
+      numPairs: 20,
+      id: 4,
+    },
+  ],
+}
+const initialCalculator = {
+  nextID: 5,
+  weight: 0,
+  allCombinations: calcPlateCombinations(
+    initialSettings.barWeight,
+    initialSettings.platePairs,
+  ),
+  matchedCombinations: [],
+  settings: initialSettings,
+}
+
 export function PlateCalculator() {
-  const [weight, setWeight] = useState(0)
-  const [folded, setFolded] = useState(true)
-  const [settings, setSettings] = useState({
-    barWeight: 45,
-    platePairs: [
-      // see note about uuid in plateCalculatorSettings
-      [2.5, 1, crypto.randomUUID()],
-      [5, 1, crypto.randomUUID()],
-      [10, 2, crypto.randomUUID()],
-      [25, 1, crypto.randomUUID()],
-      [45, 20, crypto.randomUUID()],
-    ],
-  })
-  const [combinations, setCombinations] = useState(
-    calcPlateCombinations(settings.barWeight, settings.platePairs),
+  const [calculator, dispatch] = useReducer(
+    plateCalculatorReducer,
+    initialCalculator,
   )
-  const [matchedCombinations, setMatchedCombinations] = useState([])
+  const [settingsFolded, setSettingsFolded] = useState(true)
 
   function onClickNumberButton(value) {
-    const newWeight = weight * 10 + value
-    setWeight(newWeight)
-    setMatchedCombinations(combinations.filter((c) => c[0] === newWeight))
+    dispatch({
+      type: "set_weight",
+      value: calculator.weight * 10 + value,
+    })
   }
 
   function onClickClearButton() {
-    setWeight(0)
-    setMatchedCombinations([])
+    dispatch({
+      type: "set_weight",
+      value: 0,
+    })
   }
 
   function onClickSettingsButton() {
-    setFolded(!folded)
+    setSettingsFolded(!settingsFolded)
   }
 
   function updateSettings(newSettings) {
-    setSettings(newSettings)
-    setCombinations(
-      calcPlateCombinations(newSettings.barWeight, newSettings.platePairs),
-    )
+    dispatch({
+      type: "set_settings",
+      value: newSettings,
+    })
   }
 
   return (
     <div className="p-1">
       {/* weight display */}
       <div className="mb-2 aspect-3/1 rounded-md border bg-gray-400 p-3 text-[15vw] text-black">
-        <span className="float-right">{weight}</span>
+        <span className="float-right">{calculator.weight}</span>
       </div>
 
       {/* buttons */}
@@ -104,18 +137,18 @@ export function PlateCalculator() {
       {/* results */}
       <div
         className="pt-2"
-        style={{ display: matchedCombinations.length ? "" : "none" }}
+        style={{ display: calculator.matchedCombinations.length ? "" : "none" }}
       >
         <h1>Results</h1>
-        {matchedCombinations.map((c) => (
-          <PlateCombination key={c[2]} combination={c[1]} />
+        {calculator.matchedCombinations.map((c) => (
+          <PlateCombination key={c.id} combination={c.platePairs} />
         ))}
       </div>
 
       {/* settings */}
-      <div style={{ display: folded ? "none" : "" }}>
+      <div style={{ display: settingsFolded ? "none" : "" }}>
         <PlateCalculatorSettings
-          settings={settings}
+          settings={calculator.settings}
           updateSettings={updateSettings}
         />
       </div>

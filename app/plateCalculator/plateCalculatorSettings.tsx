@@ -1,32 +1,40 @@
 export function PlateCalculatorSettings({ settings, updateSettings }) {
-  function onChangePlatePair(index, weight, quantity) {
-    const newSettings = Object.assign({}, settings, {
-      platePairs: Array.from(settings.platePairs),
-    })
-    newSettings.platePairs[index][0] = weight
-    newSettings.platePairs[index][1] = quantity
-    newSettings.platePairs.sort((a, b) => a[0] - b[0])
+  function onChangePlatePair(index, weight, numPairs) {
+    const newSettings = {
+      ...settings,
+      platePairs: [...settings.platePairs],
+    }
+    newSettings.platePairs[index].weight = weight
+    newSettings.platePairs[index].numPairs = numPairs
+    newSettings.platePairs.sort((a, b) => a.weight - b.weight)
     updateSettings(newSettings)
   }
 
   function removePlatePair(index) {
-    const newSettings = Object.assign({}, settings, {
-      platePairs: Array.from(settings.platePairs),
-    })
+    const newSettings = {
+      ...settings,
+      platePairs: [...settings.platePairs],
+    }
     newSettings.platePairs.splice(index, 1)
     updateSettings(newSettings)
   }
 
   function addPlatePair() {
-    const newSettings = Object.assign({}, settings, {
-      platePairs: Array.from(settings.platePairs),
+    const newSettings = {
+      ...settings,
+      platePairs: [...settings.platePairs],
+    }
+    newSettings.platePairs.push({
+      weight: 0,
+      numPairs: 1,
     })
-    newSettings.platePairs.push([0, 1, crypto.randomUUID()])
     updateSettings(newSettings)
   }
 
   function onChangeBarWeight(weight) {
-    const newSettings = Object.assign({}, settings)
+    const newSettings = {
+      ...settings,
+    }
     newSettings.barWeight = weight
     updateSettings(newSettings)
   }
@@ -41,9 +49,9 @@ export function PlateCalculatorSettings({ settings, updateSettings }) {
           <span>Weight</span>
           <span># Pairs</span>
         </div>
-        {settings.platePairs.map(([w, q, uuid], i) => (
+        {settings.platePairs.map(({ weight, numPairs, id }, i) => (
           // must use uuid as key because weight can be edited
-          <div className="grid grid-cols-3 gap-1" key={uuid}>
+          <div className="grid grid-cols-3 gap-1" key={id}>
             <button
               className="aspect-square w-min cursor-pointer rounded-md border bg-gray-400 px-3 font-mono text-black hover:bg-gray-500"
               onClick={() => removePlatePair(i)}
@@ -52,14 +60,18 @@ export function PlateCalculatorSettings({ settings, updateSettings }) {
             </button>
             <input
               type="number"
-              value={w}
-              onChange={(e) => onChangePlatePair(i, Number(e.target.value), q)}
+              value={weight}
+              onChange={(e) =>
+                onChangePlatePair(i, Number(e.target.value), numPairs)
+              }
               min={0}
             />
             <input
               type="number"
-              value={q}
-              onChange={(e) => onChangePlatePair(i, w, Number(e.target.value))}
+              value={numPairs}
+              onChange={(e) =>
+                onChangePlatePair(i, weight, Number(e.target.value))
+              }
               min={0}
             />
           </div>
@@ -81,7 +93,7 @@ export function PlateCalculatorSettings({ settings, updateSettings }) {
         <input
           type="number"
           value={settings.barWeight}
-          onChange={(e) => onChangeBarWeight(e.target.value)}
+          onChange={(e) => onChangeBarWeight(Number(e.target.value))}
         />
       </div>
     </div>
