@@ -6,7 +6,7 @@ import plateCalculatorReducer from "./plateCalculatorReducer"
 function CalculatorButton({ value, onClick }) {
   return (
     <button
-      className="aspect-square cursor-pointer rounded-md border bg-gray-400 text-black hover:bg-gray-500"
+      className="aspect-3/2 cursor-pointer rounded-md border bg-gray-400 text-black hover:bg-gray-500"
       onClick={onClick}
     >
       {value}
