@@ -50,7 +50,6 @@ export function PlateCalculatorSettings({ settings, updateSettings }) {
           <span># Pairs</span>
         </div>
         {settings.platePairs.map(({ weight, numPairs, id }, i) => (
-          // must use uuid as key because weight can be edited
           <div className="grid grid-cols-3 gap-1" key={id}>
             <button
               className="aspect-square w-min cursor-pointer rounded-md border bg-gray-400 px-3 font-mono text-black hover:bg-gray-500"
@@ -60,7 +59,7 @@ export function PlateCalculatorSettings({ settings, updateSettings }) {
             </button>
             <input
               type="number"
-              value={weight}
+              defaultValue={weight}
               onChange={(e) =>
                 onChangePlatePair(i, Number(e.target.value), numPairs)
               }
@@ -68,7 +67,7 @@ export function PlateCalculatorSettings({ settings, updateSettings }) {
             />
             <input
               type="number"
-              value={numPairs}
+              defaultValue={numPairs}
               onChange={(e) =>
                 onChangePlatePair(i, weight, Number(e.target.value))
               }
@@ -92,7 +91,7 @@ export function PlateCalculatorSettings({ settings, updateSettings }) {
         <label>Bar Weight</label>
         <input
           type="number"
-          value={settings.barWeight}
+          defaultValue={settings.barWeight}
           onChange={(e) => onChangeBarWeight(Number(e.target.value))}
         />
       </div>

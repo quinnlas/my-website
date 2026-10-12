@@ -19,7 +19,10 @@ export default function plateCalculatorReducer(state, action) {
 
       // handle platePair IDs
       for (let pp of newState.settings.platePairs) {
-        if (!pp.id) pp.id = newState.nextID++
+        if (pp.id === undefined) {
+          // don't use `if (!pp.id)` as this will cause a bug with id of 0 (or don't use id of 0...)
+          pp.id = newState.nextID++
+        }
       }
 
       // handle combinations
