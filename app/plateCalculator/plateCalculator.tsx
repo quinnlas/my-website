@@ -140,7 +140,8 @@ export function PlateCalculator() {
         style={{ display: calculator.matchedCombinations.length ? "" : "none" }}
       >
         <h1>Results</h1>
-        {calculator.matchedCombinations.map((c) => (
+        {calculator.matchedCombinations.slice(0, 1).map((c) => (
+          // TODO: remove slice when better display of multiple options is implemented
           <PlateCombination key={c.id} combination={c.platePairs} />
         ))}
       </div>
