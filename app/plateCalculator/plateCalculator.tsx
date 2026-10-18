@@ -116,12 +116,12 @@ export function PlateCalculator() {
   return (
     <div className="p-1">
       {/* weight display */}
-      <div className="mb-2 aspect-3/1 rounded-md border bg-gray-400 p-3 text-[15vw] text-black">
+      <div className="mx-auto mb-2 aspect-3/1 max-w-lg rounded-md border bg-gray-400 p-3 text-[15vw] text-black md:p-10 md:text-8xl">
         <span className="float-right">{calculator.weight}</span>
       </div>
 
       {/* buttons */}
-      <div className="container grid max-w-lg grid-cols-3 gap-2">
+      <div className="mx-auto grid max-w-lg grid-cols-3 gap-2">
         {[7, 8, 9, 4, 5, 6, 1, 2, 3].map((num) => (
           <CalculatorButton
             key={num}
@@ -136,7 +136,7 @@ export function PlateCalculator() {
 
       {/* results */}
       <div
-        className="pt-2"
+        className="mx-auto max-w-lg pt-2"
         style={{ display: calculator.matchedCombinations.length ? "" : "none" }}
       >
         <h1>Results</h1>
@@ -147,7 +147,10 @@ export function PlateCalculator() {
       </div>
 
       {/* settings */}
-      <div style={{ display: settingsFolded ? "none" : "" }}>
+      <div
+        className="mx-auto max-w-lg"
+        style={{ display: settingsFolded ? "none" : "" }}
+      >
         <PlateCalculatorSettings
           settings={calculator.settings}
           updateSettings={updateSettings}
