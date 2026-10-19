@@ -135,6 +135,17 @@ export function LandingPage() {
               source code.
             </a>
           </p>
+          <h2 className="py-5 text-xl">Plate Calculator</h2>
+          <p>
+            A React project that calculates what plates should be added to the
+            bar when lifting weights, optimized for mobile usage.{" "}
+            <a
+              className="text-sky-500 hover:text-lime-500"
+              href="/plate-calculator"
+            >
+              Try it!
+            </a>
+          </p>
           <h2 className="py-5 text-xl">City Learner</h2>
           <p>
             A React project that draws the map of a city with a configurable
