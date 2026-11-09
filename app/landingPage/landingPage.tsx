@@ -135,6 +135,17 @@ export function LandingPage() {
               source code.
             </a>
           </p>
+          <h2 className="py-5 text-xl">City Learner</h2>
+          <p>
+            A full stack React/Node.js project that draws the map of a city with
+            a configurable level of detail.{" "}
+            <a
+              className="text-sky-500 hover:text-lime-500"
+              href="https://city.quinnlas.com/"
+            >
+              Try it!
+            </a>
+          </p>
           <h2 className="py-5 text-xl">Plate Calculator</h2>
           <p>
             A React project that calculates what plates should be added to the
@@ -142,17 +153,6 @@ export function LandingPage() {
             <a
               className="text-sky-500 hover:text-lime-500"
               href="/plate-calculator"
-            >
-              Try it!
-            </a>
-          </p>
-          <h2 className="py-5 text-xl">City Learner</h2>
-          <p>
-            A React project that draws the map of a city with a configurable
-            level of detail.{" "}
-            <a
-              className="text-sky-500 hover:text-lime-500"
-              href="https://quinnlas.github.io/city-learner/"
             >
               Try it!
             </a>
